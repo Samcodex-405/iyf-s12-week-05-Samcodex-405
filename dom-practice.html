@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+    <style>
+        .highlight { background-color: yellow; }
+        .container { padding: 20px; border: 1px solid #ccc; }
+        .error { border: 2px solid crimson; }
+        .error-message { color: crimson; font-size: 0.85rem; }
+        .completed { text-decoration: line-through; color: gray; }
+        #task-list li { cursor: pointer; }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <h1>DOM Practice</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">About</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <article>
+            <h2 class="title">Article Title</h2>
+            <p class="content">This is the first paragraph.</p>
+            <p class="content">This is the second paragraph.</p>
+        </article>
+
+        <section>
+            <h2>Form Section</h2>
+            <form id="contact-form">
+                <input type="text" id="name" name="name" placeholder="Name">
+                <input type="email" id="email" name="email" placeholder="Email">
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Click Counter (Task 10.1)</h2>
+            <div id="counter-area"></div>
+        </section>
+
+        <section>
+            <h2>Delegated Task List (Task 10.3)</h2>
+            <form id="task-form">
+                <input type="text" id="task-input" placeholder="New task">
+                <button type="submit">Add</button>
+            </form>
+            <ul id="task-list"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Shaniz Ann Mumbua</p>
+    </footer>
+
+    <script src="dom.js"></script>
+</body>
+</html>
