@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4: Content Copier</title>
+    <style>
+        body { font-family: sans-serif; padding: 24px; }
+        .box { border: 2px dashed #888; padding: 16px; margin: 12px 0; min-height: 60px; }
+        .box.over { background: #e0f2f1; }
+    </style>
+</head>
+<body>
+    <h1>Content Copier</h1>
+    <div id="source" class="box" draggable="true">Copy me: <strong>hello from the source box</strong></div>
+    <button id="copy-btn">Copy to target</button>
+    <div id="target" class="box">Target (drop here too)</div>
+    <script>
+        const source = document.getElementById("source");
+        const target = document.getElementById("target");
+
+        document.getElementById("copy-btn").addEventListener("click", function () {
+            target.innerHTML = source.innerHTML; // safe: this HTML is written by me, not typed by a user
+        });
+
+        // Bonus: drag and drop
+        source.addEventListener("dragstart", function (event) {
+            event.dataTransfer.setData("text/plain", "copy");
+        });
+        target.addEventListener("dragover", function (event) {
+            event.preventDefault();
+            target.classList.add("over");
+        });
+        target.addEventListener("dragleave", function () { target.classList.remove("over"); });
+        target.addEventListener("drop", function (event) {
+            event.preventDefault();
+            target.classList.remove("over");
+            target.innerHTML = source.innerHTML;
+        });
+    </script>
+</body>
+</html>
