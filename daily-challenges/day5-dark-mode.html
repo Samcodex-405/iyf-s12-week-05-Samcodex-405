@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5: Dark Mode Toggle</title>
+    <style>
+        body {
+            font-family: sans-serif; padding: 24px;
+            background: #ffffff; color: #1b1b1b;
+            transition: background 0.4s, color 0.4s;
+        }
+        body.dark { background: #14201e; color: #e8f1ef; }
+    </style>
+</head>
+<body>
+    <h1>Dark Mode Toggle</h1>
+    <p>Click the button to switch themes. Your choice is remembered.</p>
+    <button id="theme-btn">Toggle dark mode</button>
+    <script>
+        const btn = document.getElementById("theme-btn");
+        try {
+            if (localStorage.getItem("theme") === "dark") document.body.classList.add("dark");
+        } catch (e) { /* storage unavailable: ignore */ }
+
+        btn.addEventListener("click", function () {
+            const isDark = document.body.classList.toggle("dark");
+            try { localStorage.setItem("theme", isDark ? "dark" : "light"); } catch (e) {}
+        });
+    </script>
+</body>
+</html>
