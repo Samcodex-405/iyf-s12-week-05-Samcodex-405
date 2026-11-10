@@ -1,6 +1,6 @@
 # Week 5: DOM Manipulation
 
-**Student:** Shaniz Ann Mumbua (GitHub: Samcodex-405)
+- **Student:** Shaniz Ann Mumbua (GitHub: Samcodex-405)
 - **Course:** IYF Weekend Academy, Season 12
 - **Repository:** iyf-s12-week-05-Samcodex-405
 
