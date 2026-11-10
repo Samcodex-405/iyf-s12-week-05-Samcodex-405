@@ -1,8 +1,8 @@
 # Week 5: DOM Manipulation
 
 **Student:** Shaniz Ann Mumbua (GitHub: Samcodex-405)
-**Course:** IYF Weekend Academy, Season 12
-**Repository:** iyf-s12-week-05-Samcodex-405
+- **Course:** IYF Weekend Academy, Season 12
+- **Repository:** iyf-s12-week-05-Samcodex-405
 
 This week I learned to select, change, add and remove page elements with JavaScript, and to respond to clicks, typing and keyboard events. The deliverable is an interactive To-Do List.
 
