@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3: Image Remover</title>
+    <style>
+        body { font-family: sans-serif; padding: 24px; }
+        img { width: 120px; height: 120px; margin: 6px; }
+        img.hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Image Remover</h1>
+    <button id="remove-btn">Remove all images</button>
+    <button id="toggle-btn">Hide / show images (bonus)</button>
+    <div id="gallery">
+        <img alt="Teal square" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' fill='%230f766e'/%3E%3C/svg%3E">
+        <img alt="Orange square" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' fill='%23d97706'/%3E%3C/svg%3E">
+        <img alt="Blue square" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' fill='%232563eb'/%3E%3C/svg%3E">
+    </div>
+    <script>
+        document.getElementById("remove-btn").addEventListener("click", function () {
+            document.querySelectorAll("img").forEach(function (img) { img.remove(); });
+        });
+        document.getElementById("toggle-btn").addEventListener("click", function () {
+            document.querySelectorAll("img").forEach(function (img) { img.classList.toggle("hidden"); });
+        });
+    </script>
+</body>
+</html>
